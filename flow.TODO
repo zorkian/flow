@@ -1,5 +1,6 @@
 flow/flux:
  ☐ Naming is hard, flow or flux?
- 
-foo:
-  sdflk
+
+code:
+ ☐ Write out basic models
+ ☐ Tests for models
