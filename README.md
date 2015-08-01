@@ -1,5 +1,7 @@
 # flow
 
+[![Build Status](https://travis-ci.org/zorkian/flow.svg?branch=master)](https://travis-ci.org/zorkian/flow)
+
 The information tracking and publication system designed for complicated, busy
 environments.
 

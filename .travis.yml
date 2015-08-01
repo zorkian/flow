@@ -9,7 +9,6 @@ install:
   - pip install https://github.com/dcramer/pyflakes/tarball/master --quiet --use-mirrors
   - pip install -r requirements.txt --quiet --use-mirrors
 before_script:
-  - ls
   - "pep8 --exclude=migrations --ignore=E501,E225 ."
   - pyflakes -x W .
 script:
