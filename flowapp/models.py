@@ -2,13 +2,16 @@ from django.db import models
 from django_enumfield import enum
 from django_extensions.db import models as models_ext
 
+
 class AccountType(enum.Enum):
     ROLE = 0
     USER = 1
 
+
 class AccountStatus(enum.Enum):
     ENABLED = 0
     DISABLED = 1
+
 
 class Account(models_ext.TimeStampedModel):
     """Account is someone that might author content
@@ -35,6 +38,7 @@ class Account(models_ext.TimeStampedModel):
     def is_disabled(self):
         return self.accountstatus == AccountStatus.DISABLED
 
+
 class Topic(models_ext.TimeStampedModel):
     """Topic is the unit of organization of content
 
@@ -44,11 +48,13 @@ class Topic(models_ext.TimeStampedModel):
     parent = models.ForeignKey('self', null=True, blank=True)
     tags = models.ManyToManyField('Tag')
 
+
 class Tag(models_ext.TimeStampedModel):
     """Tags are used in various places as metadata
 
     """
     name = models.CharField(max_length=128, unique=True)
+
 
 class Event(models_ext.TimeStampedModel):
     """Events are the core bit of information
