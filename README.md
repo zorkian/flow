@@ -3,6 +3,9 @@
 The information tracking and publication system designed for complicated, busy
 environments.
 
+**This is a theoretical README as if the project really exists. It doesn't yet,
+so you can ignore this!**
+
 ## Backstory
 
 Today we live in incredibly complicated environments where dozens of teams are
