@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('modified', django_extensions.db.fields.ModificationDateTimeField(default=django.utils.timezone.now, verbose_name='modified', editable=False, blank=True)),
                 ('name', models.CharField(unique=True, max_length=128)),
                 ('email', models.EmailField(max_length=254)),
-                ('api_key', models.CharField(max_length=128)),
+                ('apikey', models.CharField(max_length=128)),
                 ('accounttype', models.IntegerField(default=1)),
                 ('accountstatus', models.IntegerField(default=0)),
             ],

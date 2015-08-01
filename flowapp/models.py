@@ -21,20 +21,24 @@ class Account(models_ext.TimeStampedModel):
     """
     name = models.CharField(max_length=128, unique=True)
     email = models.EmailField()
-    api_key = models.CharField(max_length=128)
+    apikey = models.CharField(max_length=128)
     accounttype = enum.EnumField(AccountType, default=AccountType.USER)
     accountstatus = enum.EnumField(AccountStatus, default=AccountStatus.ENABLED)
     topic = models.ForeignKey('Topic')
 
+    @property
     def is_user(self):
         return self.accounttype == AccountType.USER
 
+    @property
     def is_role_account(self):
         return self.accounttype == AccountType.ROLE
 
+    @property
     def is_enabled(self):
         return self.accountstatus == AccountStatus.ENABLED
 
+    @property
     def is_disabled(self):
         return self.accountstatus == AccountStatus.DISABLED
 
